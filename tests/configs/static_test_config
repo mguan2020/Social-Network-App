@@ -1,0 +1,5 @@
+port 8080;
+
+location /static1 StaticHandler {
+    root static_test_files;
+}

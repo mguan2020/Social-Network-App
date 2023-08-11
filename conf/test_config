@@ -1,0 +1,29 @@
+port 8080;
+
+location /static1 StaticHandler{
+    root ../data;
+}
+
+location /static2 StaticHandler {
+    root ../another;
+}
+
+location /echo EchoHandler {
+}
+
+location /api CrudHandler {
+    root ../data/crud;
+}
+
+location /sleep BlockHandler {
+}
+
+location / FileNotFoundHandler {
+}
+
+location /health HealthHandler {
+}
+
+location /meme MemeHandler {
+    root ../data/meme;
+}

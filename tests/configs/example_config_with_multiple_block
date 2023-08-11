@@ -1,0 +1,21 @@
+foo "bar";
+
+server {
+  listen   80;
+  server_name foo.com;
+  root /home/ubuntu/sites/foo/;
+  location / {
+    root /data/www;
+  }
+  location /images/ {
+    root /data;
+  }
+}
+
+server {
+    listen 8080;
+    root /data/up1;
+
+    location / {
+    }
+}

@@ -1,0 +1,13 @@
+port 8080;
+
+location /static1/ StaticHandler {
+    root /data;
+}
+
+location /echo EchoHandler {
+
+}
+
+location / EchoHandler {
+
+}

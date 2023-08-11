@@ -1,0 +1,49 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        docker pull gcr.io/$PROJECT_ID/yet-another-web-server:base || exit 0
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-f",
+        "docker/base.Dockerfile",
+        "-t",
+        "yet-another-web-server:base",
+        "-t",
+        "gcr.io/$PROJECT_ID/yet-another-web-server:base",
+        "--cache-from",
+        "gcr.io/$PROJECT_ID/yet-another-web-server:base",
+        ".",
+      ]
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/$PROJECT_ID/yet-another-web-server:base"]
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-f",
+        "docker/Dockerfile",
+        "-t",
+        "gcr.io/$PROJECT_ID/yet-another-web-server:latest",
+        ".",
+      ]
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-f",
+        "docker/coverage.Dockerfile",
+        "-t",
+        "gcr.io/$PROJECT_ID/yet-another-web-server:coverage",
+        ".",
+      ]
+images:
+  [
+    "gcr.io/$PROJECT_ID/yet-another-web-server:base",
+    "gcr.io/$PROJECT_ID/yet-another-web-server:latest",
+    "gcr.io/$PROJECT_ID/yet-another-web-server:coverage",
+  ]

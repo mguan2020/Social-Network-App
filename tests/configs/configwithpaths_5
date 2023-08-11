@@ -1,0 +1,14 @@
+port 3000;
+
+location /static1 StaticHandler{
+    root usr/bin;
+    altpath foo/bar;
+}
+
+location /echo EchoHandler{
+
+}
+
+location /static2 StaticHandler{
+    root foo/bar;
+}

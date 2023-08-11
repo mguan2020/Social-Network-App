@@ -1,0 +1,9 @@
+port 8080;
+
+location /static1/ StaticHandler {
+    root /usr/bin;
+}
+
+location /static2/ StaticHandler {
+    root /foo/bar;
+}
