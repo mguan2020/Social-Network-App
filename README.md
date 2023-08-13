@@ -120,7 +120,7 @@ Then you need to add an entry to our static function in RequestHandlerFactoryFac
 
 Don't forget to update the CMakeLists.txt file with the appropriate dependencies before you build the server to test your changes.
 
-The config file you use for testing is test_config. The config file that goes into the docker image is deploy_config. Please feel free to reference the Assignment 6 spec for the specifics of the config file format.
+The config file you use for testing is test_config. The config file that goes into the docker image is deploy_config.
 
 
 # Format of the requesthandlerfactory
