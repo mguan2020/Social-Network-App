@@ -181,5 +181,15 @@ location [request URI path] [name of handler] {
 
 # Screenshots/Results
 
+Photo uploading:
+
+![first](https://github.com/mguan2020/Social-Network-App/assets/99301559/73d523a7-c406-4cf8-8578-ec06aaa71bd2)
+
+Meme generation:
+
+![second](https://github.com/mguan2020/Social-Network-App/assets/99301559/9c6ff9c7-2bda-48ba-b540-bed052a4b955)
+
+
+
 
 
