@@ -1,3 +1,9 @@
+# About the project
+
+This is a full-stack social media application with support for photo uploading and sharing. It runs on a multithreaded C++ web server built from scratch. 
+
+As an additional feature, the user is able to generate memes for users with several different templates, with the ability to customize the meme text as they wish.
+
 # Source Code Layout
 
 - conf: stores the configuration files for both development and testing
@@ -172,4 +178,8 @@ is
 location [request URI path] [name of handler] {
     [optional handler arguments]
 }
+
+# Screenshots/Results
+
+
 
